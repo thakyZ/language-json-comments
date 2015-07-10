@@ -12,8 +12,9 @@
   'ldjson'
   'topojson'
   'webapp'
+  'config'
 ]
-'name': 'JSON'
+'name': 'JSON //'
 'patterns': [
   {
     'include': '#value'
@@ -31,6 +32,9 @@
         'name': 'punctuation.definition.array.end.json'
     'name': 'meta.structure.array.json'
     'patterns': [
+      {
+        'include': '#comments'
+      }
       {
         'include': '#value'
       }
@@ -62,6 +66,9 @@
         'name': 'punctuation.definition.dictionary.end.json'
     'name': 'meta.structure.dictionary.json'
     'patterns': [
+      {
+        'include': '#comments'
+      }
       {
         'comment': 'the JSON object key'
         'include': '#string'
@@ -129,6 +136,29 @@
       }
       {
         'include': '#object'
+      }
+    ]
+  'comments':
+    'patterns': [
+      {
+        'match': '/{2}.*'
+        'name': 'comment.single.json'
+      }
+      {
+        'begin': '/\\*\\*(?!/)'
+        'captures':
+          '0':
+            'name': 'punctuation.definition.comment.json'
+        'end': '\\*/'
+        'name': 'comment.block.documentation.json'
+      }
+      {
+        'begin': '/\\*'
+        'captures':
+          '0':
+            'name': 'punctuation.definition.comment.json'
+        'end': '\\*/'
+        'name': 'comment.block.json'
       }
     ]
 'scopeName': 'source.json'
