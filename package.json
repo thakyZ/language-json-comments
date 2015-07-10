@@ -1,6 +1,6 @@
 {
   "name": "language-json-comments",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "description": "JSON language with comments support in Atom",
   "engines": {
     "atom": "*",
