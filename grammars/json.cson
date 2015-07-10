@@ -17,6 +17,9 @@
 'name': 'JSON //'
 'patterns': [
   {
+    'include': '#comments'
+  }
+  {
     'include': '#value'
   }
 ]
