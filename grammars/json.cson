@@ -88,6 +88,9 @@
         'name': 'meta.structure.dictionary.value.json'
         'patterns': [
           {
+            'include': '#comments'
+          }
+          {
             'comment': 'the JSON object value'
             'include': '#value'
           }
