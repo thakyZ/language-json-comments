@@ -1,3 +1,4 @@
+'scopeName': 'source.json.comments'
 'fileTypes': [
   'babelrc'
   'bowerrc'
@@ -167,4 +168,3 @@
         'name': 'comment.block.json'
       }
     ]
-'scopeName': 'source.json'
